@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import restrauData from "../../assets/restrauData.json";
 
-const baseURL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+const baseURL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 export default function Restaurants() {
- 
   const [allRestaurants, setAllRestaurants] = useState([]);
-  console.log(restrauData);
+
   useEffect(() => {
     setAllRestaurants(restrauData);
   }, [restrauData]);

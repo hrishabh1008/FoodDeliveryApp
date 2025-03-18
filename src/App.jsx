@@ -13,6 +13,9 @@ function App() {
     <>
       <Header />
       <Body />
+
+      <Memo />
+      <Ref />
       <Footer />
     </>
   );

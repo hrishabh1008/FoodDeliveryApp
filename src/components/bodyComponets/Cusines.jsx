@@ -38,7 +38,7 @@ export default function Cusines() {
       />
       <p>This is the cuisines section in the main body</p>
 
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-evenly  items-start gap-10">
         {filteredDishes.length > 0 ? (
           filteredDishes.map((dish) => (
             <Cards

@@ -1,20 +1,30 @@
+import { Link } from "react-router-dom";
+// import { useDispatch } from "react-redux";
+// import { addItem } from "../redux/cartSlice";
 export default function Cards(props) {
+  //   const dispatch = useDispatch();
+  //   console.log(useDispatch);
+  //   function handleAddItem(item) {
+  //     dispatch(addItem(item));
+  //   }
+
   return (
     <>
-      <div className="bg-blue-50 rounded-2xl size-96">
+      <div className=" rounded-2xl p-2 w-70 h-70   overflow-hidden hover:scale-105 hover:shadow-lg">
         <img
-          className="rounded-3xl object-fit max-w-4/5 max-h-3/5 text-center"
+          className=" w-full h-40 object-cover rounded-2xl  border-1 "
           src={props.imgURL}
-          alt=""
-          //   height="150"
-          //   width="200"
+          alt="Item Image"
         />
-        <h3>{props.name}</h3>
-        <p className="font-bold">
-          {props.rating}
-          <span>{props.deliveryTime}</span>
+        <p className="font-bold text-center">
+          {props.rating} [<span>{props.deliveryTime}</span>]
         </p>
-        <p className="overflow-auto">{props.description}</p>
+        <h3 className="font-bold font-serif">{props.name}</h3>
+
+        <p className="overflow-hidden ">{props.description}</p>
+        {/* <button className="font-bold bg-green-300" onClick={handleAddItem}>
+          {props.button}
+        </button> */}
       </div>
     </>
   );
